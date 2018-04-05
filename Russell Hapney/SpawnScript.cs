@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,14 +10,13 @@ public class SpawnScript : MonoBehaviour {
     
     // Use this for initialization
 	void Start ()
-    {
-        Spawn();	
+    	{
+        	Spawn();	
 	}
 	
-	// Update is called once per frame
 	void Spawn ()
-    {
-        Instantiate(obj[Random.Range(0, obj.GetLength(0))], transform.position, Quaternion.identity);
-        Invoke("Spawn", Random.Range(spawnMin, spawnMax));
+    	{
+        	Instantiate(obj[Random.Range(0, obj.GetLength(0))], transform.position, Quaternion.identity);
+        	Invoke("Spawn", Random.Range(spawnMin, spawnMax));
 	}
 }
